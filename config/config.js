@@ -8,7 +8,7 @@ var config = {
     app: {
       name: 'iotexpress'
     },
-    port: PORT, // 3001,
+    port: process.env.PORT || 3001,
     db: 'mongodb://localhost/iotexpress-development'
   },
 
@@ -17,7 +17,7 @@ var config = {
     app: {
       name: 'iotexpress'
     },
-    port: 3000,
+    port: process.env.PORT || 3001,
     db: 'mongodb://localhost/iotexpress-test'
   },
 
@@ -26,7 +26,7 @@ var config = {
     app: {
       name: 'iotexpress'
     },
-    port: PORT,
+    port: process.env.PORT || 3001,
     db: 'mongodb://localhost/iotexpress-production'
   }
 };
