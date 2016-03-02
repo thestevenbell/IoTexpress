@@ -15,20 +15,21 @@ var models = glob.sync(config.root + '/app/models/*.js');
 models.forEach(function (model) {
   require(model);
 });
+
 var app = express();
-
 require('./config/express')(app, config);
-
+/*
 app.listen(config.port, function () {
   console.log('Express server listening on port ' + config.port);
 });
+*/
 
 // Setup SOCKET.IO Server
 var http = require('http');
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);  //pass a http.Server instance
-var port = process.env.PORT || 9010;
-server.listen(port);
+console.log('Socket.IO port set to:', config.socketPort);
+server.listen(config.socketPort);
 
 io.on('connection', function(socket) {
   console.log('sending news');
