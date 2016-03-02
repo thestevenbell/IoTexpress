@@ -7,12 +7,8 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
-router.get('/', function (req, res, next) {
-  Weather.find(function (err, weather) {
-    if (err) return next(err);
+router.get('/', function (req, res) {
     res.render('index', {
       title: 'Simulated IoT Weather Data Server',
-      weather: weather
     });
-  });
 });
