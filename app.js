@@ -1,4 +1,3 @@
-
 var express = require('express'),
   config = require('./config/config'),
   glob = require('glob');
@@ -28,7 +27,8 @@ app.listen(config.port, function () {
 var http = require('http');
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);  //pass a http.Server instance
-server.listen(9010);  //listen on port 9010
+var port = process.env.PORT || 9010;
+server.listen(port);
 
 io.on('connection', function(socket) {
   console.log('sending news');
