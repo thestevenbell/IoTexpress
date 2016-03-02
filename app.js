@@ -40,16 +40,16 @@ io.on('connection', function(socket) {
     console.log('sending the weather...');
     socket.emit('weather',
         { 'device': 'NodeSim1',
-          'temperature': Math.floor(Math.random()*(80-65+1)+65),
-          'humidity' : Math.floor(Math.random()*(99-20+1)+20),
+          'temperature': Math.floor(Math.random()*(75-65+1)+75),
+          'humidity' : Math.floor(Math.random()*(70-60+1)+60),
         });
       // integer sets the interval of data output
-  }, 20000);
+  }, 5000);
 });
 
-function randomIntFromInterval(min,max)
-{
-    return Math.floor(Math.random()*(max-min+1)+min);
-}
+// function randomIntFromInterval(min,max)
+// {
+//     return Math.floor(Math.random()*(max-min+1)+min);
+// }
 
 module.exports = app;

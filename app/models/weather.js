@@ -1,4 +1,4 @@
-// Example model
+// Weather model
 
 var mongoose = require('mongoose'),
   Schema = mongoose.Schema;
