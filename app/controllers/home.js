@@ -12,3 +12,5 @@ router.get('/', function (req, res) {
       title: 'Simulated IoT Weather Data Server',
     });
 });
+
+

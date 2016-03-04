@@ -43,7 +43,7 @@ io.on('connection', function(socket) {
     console.log('sending the weather...');
     socket.emit('weather',
         { 'device': 'NodeSim1',
-          'temperature': Math.floor(Math.random()*(75-65+1)+75),
+          'temperature': Math.floor(Math.random()*(65-55+1)+55),
           'humidity' : Math.floor(Math.random()*(70-60+1)+60),
         });
       // integer sets the interval of data output
