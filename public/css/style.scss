@@ -14,7 +14,23 @@ h1 {
   font-size: 3.2em;
 }
 
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+
+}
+
 p, li {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+}
+
+.card {
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.62);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.62);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.62);
+  margin-bottom: 2.5em;
+  background-color: lightblue;
+  padding: 1.5em;
 }
